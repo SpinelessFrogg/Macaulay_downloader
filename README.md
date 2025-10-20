@@ -1,73 +1,57 @@
 <div align="center">
-<h1>Multi-Taxa Bioacoustic Data Downloader</h1>
-<!-- To make this look even more professional, replace the 'placehold.co' link with a link to your project's logo image (e.g., /docs/logo.png). -->
-<img src="https://placehold.co/300x150/000/fff?text=YOUR+PROJECT+LOGO" width="300" alt="Project Logo Placeholder" />
+  <h1>Macaulay Downloader</h1>
+    
 </div>
-
+<br>
 <div align="center">
 
+![License](https://img.shields.io/github/license/Md-Shaid-Hasan-Niloy/Macaulay_downloader)
+![OS](https://badgen.net/badge/OS/Linux%2C%20Windows%2C%20macOS/blue)
+[![Python 3.x](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/downloads/)
+[![PyPI - Version](https://img.shields.io/pypi/v/macaulay-downloader?logo=pypi)](https://pypi.org/project/macaulay-downloader/)
+
+[![CI/CD Status](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/actions/workflows/ci.yml/badge.svg)](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/actions/workflows/ci.yml)
+[![GitHub issues](https://img.shields.io/github/issues/Md-Shaid-Hasan-Niloy/Macaulay_downloader)](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/issues)
+![GitHub stars)](https://img.shields.io/github/stars/Md-Shaid-Hasan-Niloy/Macaulay_downloader)
 </div>
 
-Automated Python utility for bulk downloading animal vocalizations from Macaulay Library and Xeno-Canto for Machine Learning (ML) research.
+<br>
 
-🚀 Project Goal (Phase 1: Data Acquisition)
+A robust, cross-platform **command-line tool** designed to facilitate bulk download of media files (audio, photo, video) and associated rich **metadata** from the **Macaulay Library** at the Cornell Lab of Ornithology.
 
-This repository contains the core scripts used to collect and structure the training data for a generalized animal sound classification model (inspired by the BirdNET project).
+This project is ideal for researchers, citizen scientists, and data enthusiasts needing reliable, automated access to public Macaulay Library data for large-scale analysis.
 
-The objective is to gather high-volume, labeled acoustic data across multiple taxa (birds, mammals, amphibians, insects) from global community science archives to build a robust deep learning dataset.
+---
 
-✨ Features
+## 📖 Table of Contents
 
-Multi-Source: Downloads audio files from both the Macaulay Library (via eBird API) and Xeno-Canto.
+* [Key Features](#-key-features)
+* [Installation](#-installation)
+* [Usage Examples](#-usage-examples)
+* [API Key Configuration](#-api-key-configuration)
+* [Contributing](#-contributing)
+* [Citation](#-citation)
+* [License](#-license)
 
-Hierarchical Structure: Organizes all downloaded audio into a logical, hierarchical folder structure (e.g., data/Species_Name/Audio_ID.mp3) suitable for direct use in deep learning pipelines.
+---
 
-Progress Tracking: Efficiently resumes downloads and handles file naming conventions from both libraries.
+## ✨ Key Features
 
-🛠️ Setup and Installation
+* **Batch Processing:** Efficiently downloads files from a list of catalog numbers or search criteria.
+* **Metadata Richness:** Automatically embeds or saves detailed metadata (e.g., species, location, date, observer) with each file.
+* **Intelligent Resumption:** Skips already downloaded files, making it reliable for large or intermittent download sessions.
+* **Flexible Output:** Customize file naming conventions and output directory structure.
 
-Prerequisites
+---
 
-You need Python 3.8+ installed.
+## ⬇️ Installation
 
-Installation
+### Prerequisites
 
-Clone the Repository:
+This tool requires **Python 3.x**.
 
-git clone [https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader.git](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader.git)
-cd Macaulay_downloader
+### Recommended: Via pip
 
-
-Install Dependencies:
-Install the necessary Python packages using the provided requirements.txt file:
-
-pip install -r requirements.txt
-
-
-⚙️ Usage
-
-The main script is Download_Audio.py. It is assumed that you have configured the necessary API credentials (e.g., Macaulay Library keys or eBird credentials) within the script itself or as environment variables.
-
-To run the downloader script:
-
-python Download_Audio.py
-
-
-The script will begin downloading files, organizing them into a new directory, typically named data/ or downloads/.
-
-⏭️ Next Steps
-
-The next phase of the project involves pre-processing this raw audio data into Mel-spectrograms and designing the deep convolutional neural network (CNN) model architecture for multi-taxa classification.
-
-Contribution
-
-If you are an Honors College student looking to collaborate, please review the project goals and contact the repository owner. Contributions to data analysis, ML model development, and documentation are welcome.
-
-📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-📧 Contact
-
-Md. Shaid Hasan Niloy – Your Email Address (Update this with your actual email!)
-Project Link: https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader
+If published to PyPI:
+```bash
+pip install macaulay-downloader
