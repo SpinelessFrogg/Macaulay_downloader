@@ -1,8 +1,6 @@
 <div align="center">
   <h1>Multi-Taxa Bioacoustic Data Downloader</h1>
-    <a href="https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader">
-        <img src="https://i.imgur.com/8Qp4S2G.png" width="250" alt="Bioacoustic Downloader Icon" />
-    </a>
+   
 </div>
 <br>
 <div align="center">
