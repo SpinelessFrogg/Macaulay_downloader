@@ -1,18 +1,17 @@
 <div align="center">
   <h1>Multi-Taxa Bioacoustic Data Downloader</h1>
-    
+    <a href="https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader">
+        <img src="https://i.imgur.com/8Qp4S2G.png" width="250" alt="Bioacoustic Downloader Icon" />
+    </a>
 </div>
 <br>
 <div align="center">
 
-![License](https://img.shields.io/github/license/Md-Shaid-Hasan-Niloy/Macaulay_downloader)
+[![License](https://img.shields.io/github/license/Md-Shaid-Hasan-Niloy/Macaulay_downloader)](LICENSE)
 ![OS](https://badgen.net/badge/OS/Linux%2C%20Windows%2C%20macOS/blue)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub release](https://img.shields.io/github/v/release/Md-Shaid-Hasan-Niloy/Macaulay_downloader)](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/releases/latest)
-
 [![GitHub issues](https://img.shields.io/github/issues/Md-Shaid-Hasan-Niloy/Macaulay_downloader)](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/issues)
 ![GitHub stars)](https://img.shields.io/github/stars/Md-Shaid-Hasan-Niloy/Macaulay_downloader)
-[![Collaborators](https://img.shields.io/badge/Collaboration-Welcome-brightgreen)](CONTRIBUTING.md)
 
 </div>
 
@@ -32,13 +31,13 @@ The objective is to gather high-volume, labeled acoustic data across **multiple 
 
 ## 📖 Table of Contents
 
-* [Features](#-features)
-* [Setup and Installation](#-setup-and-installation)
-* [Usage](#-usage)
-* [Next Steps](#-next-steps)
-* [Contribution](#-contribution)
-* [License](#-license)
-* [Contact](#-contact)
+* [Features](#features)
+* [Setup and Installation](#setup-and-installation)
+* [Usage](#usage)
+* [Next Steps](#next-steps)
+* [Contribution](#contribution)
+* [License](#license)
+* [Contact](#contact)
 
 ---
 
