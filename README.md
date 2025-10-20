@@ -1,11 +1,10 @@
 <div align="center">
 <h1>Multi-Taxa Bioacoustic Data Downloader</h1>
-
+<!-- Replace 'logo.png' with the path to your own project's logo image URL -->
+<img src="https://placehold.co/300x150/000/fff?text=YOUR+PROJECT+LOGO" width="300" alt="Project Logo Placeholder" />
 </div>
 
 <div align="center">
-
-<!-- BADGES: Customize these to reflect your project's status -->
 
 </div>
 
@@ -70,9 +69,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 📧 Contact
 
-Md. Shaid Hasan Niloy – 
-
-$$Your Email Address$$
-
- (Update this with your actual email!)
+Md. Shaid Hasan Niloy – Your Email Address (Update this with your actual email!)
 Project Link: https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader
