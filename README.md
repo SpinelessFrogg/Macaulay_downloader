@@ -61,5 +61,9 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 📧 Contact
 
-Md. Shaid Hasan Niloy – [Your Email Address] (Update this!)
-Project Link: https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader
+Md. Shaid Hasan Niloy – 
+
+$$Your Email Address$$
+
+ (Update this!)
+Project Link: https://www.google.com/search?q=https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader
