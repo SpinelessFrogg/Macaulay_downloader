@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Multi-Taxa Bioacoustic Data Downloader</h1>
-<!-- Replace 'logo.png' with the path to your own project's logo image URL -->
+<!-- To make this look even more professional, replace the 'placehold.co' link with a link to your project's logo image (e.g., /docs/logo.png). -->
 <img src="https://placehold.co/300x150/000/fff?text=YOUR+PROJECT+LOGO" width="300" alt="Project Logo Placeholder" />
 </div>
 
