@@ -1,57 +1,67 @@
 <div align="center">
-  <h1>Macaulay Downloader</h1>
-    
+  <h1>Multi-Taxa Bioacoustic Data Downloader</h1>
+    <a href="https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader">
+        <img src="https://i.imgur.com/8Qp4S2G.png" width="250" alt="Bioacoustic Downloader Icon" />
+    </a>
 </div>
 <br>
 <div align="center">
 
 ![License](https://img.shields.io/github/license/Md-Shaid-Hasan-Niloy/Macaulay_downloader)
 ![OS](https://badgen.net/badge/OS/Linux%2C%20Windows%2C%20macOS/blue)
-[![Python 3.x](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/downloads/)
-[![PyPI - Version](https://img.shields.io/pypi/v/macaulay-downloader?logo=pypi)](https://pypi.org/project/macaulay-downloader/)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![GitHub release](https://img.shields.io/github/v/release/Md-Shaid-Hasan-Niloy/Macaulay_downloader)](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/releases/latest)
 
-[![CI/CD Status](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/actions/workflows/ci.yml/badge.svg)](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/actions/workflows/ci.yml)
 [![GitHub issues](https://img.shields.io/github/issues/Md-Shaid-Hasan-Niloy/Macaulay_downloader)](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader/issues)
 ![GitHub stars)](https://img.shields.io/github/stars/Md-Shaid-Hasan-Niloy/Macaulay_downloader)
+[![Collaborators](https://img.shields.io/badge/Collaboration-Welcome-brightgreen)](CONTRIBUTING.md)
+
 </div>
 
 <br>
 
-A robust, cross-platform **command-line tool** designed to facilitate bulk download of media files (audio, photo, video) and associated rich **metadata** from the **Macaulay Library** at the Cornell Lab of Ornithology.
+**Automated Python utility for bulk downloading animal vocalizations from Macaulay Library and Xeno-Canto for Machine Learning (ML) research.**
 
-This project is ideal for researchers, citizen scientists, and data enthusiasts needing reliable, automated access to public Macaulay Library data for large-scale analysis.
+---
+
+## 🚀 Project Goal (Phase 1: Data Acquisition)
+
+This repository contains the core scripts used to collect and structure the training data for a generalized animal sound classification model (inspired by the BirdNET project).
+
+The objective is to gather high-volume, labeled acoustic data across **multiple taxa** (birds, mammals, amphibians, insects) from global community science archives to build a robust deep learning dataset.
 
 ---
 
 ## 📖 Table of Contents
 
-* [Key Features](#-key-features)
-* [Installation](#-installation)
-* [Usage Examples](#-usage-examples)
-* [API Key Configuration](#-api-key-configuration)
-* [Contributing](#-contributing)
-* [Citation](#-citation)
+* [Features](#-features)
+* [Setup and Installation](#-setup-and-installation)
+* [Usage](#-usage)
+* [Next Steps](#-next-steps)
+* [Contribution](#-contribution)
 * [License](#-license)
+* [Contact](#-contact)
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-* **Batch Processing:** Efficiently downloads files from a list of catalog numbers or search criteria.
-* **Metadata Richness:** Automatically embeds or saves detailed metadata (e.g., species, location, date, observer) with each file.
-* **Intelligent Resumption:** Skips already downloaded files, making it reliable for large or intermittent download sessions.
-* **Flexible Output:** Customize file naming conventions and output directory structure.
+* **Multi-Source:** Downloads audio files from both the **Macaulay Library** (via eBird API) and **Xeno-Canto**.
+* **Hierarchical Structure:** Organizes all downloaded audio into a logical, hierarchical folder structure (e.g., `data/Species_Name/Audio_ID.mp3`) suitable for direct use in deep learning pipelines.
+* **Progress Tracking:** Efficiently resumes downloads and handles file naming conventions from both libraries.
 
 ---
 
-## ⬇️ Installation
+## 🛠️ Setup and Installation
 
 ### Prerequisites
 
-This tool requires **Python 3.x**.
+You need **Python 3.8+** installed.
 
-### Recommended: Via pip
+### Installation
 
-If published to PyPI:
+**1. Clone the Repository:**
+
 ```bash
-pip install macaulay-downloader
+git clone [https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader.git](https://github.com/Md-Shaid-Hasan-Niloy/Macaulay_downloader.git)
+cd Macaulay_downloader
