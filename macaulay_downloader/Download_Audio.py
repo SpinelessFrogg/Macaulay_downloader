@@ -154,45 +154,51 @@ def fetch_macaulay(code, scientific_name='', species_folder=''):
         "taxonCode": code,
         "mediaType": "audio",
         "sort": "rating_rank_desc",
-        "pageSize": 1000
+        "pageSize": 1000,
+        "page": page
     }
     url = MACAULAY_URL
-
+    page = 1
+    
     try:
-        response = requests.get(url, params=params, timeout=15)
-        response.raise_for_status()
-        json_data = response.json()
-        results = json_data.get('results', {}).get('content', [])
-
-        print(f"  → Found {len(results)} recordings on Macaulay")
+        while True:
+            response = requests.get(url, params=params, timeout=15)
+            response.raise_for_status()
+            json_data = response.json()
+            results = json_data.get('results', {}).get('content', [])
+            if not results:
+                break
+            print(f"  → Found {len(results)} recordings on Macaulay")
+            
+            url_list = []
+            for item in results:
+                audio_url = item.get("audioUrl") or item.get("mediaUrl")
+                url_list.append(audio_url)
+            page += 1
         
-        url_list = []
-        for item in results:
-            audio_url = item.get("audioUrl") or item.get("mediaUrl")
-            url_list.append(audio_url)
-            # asset_id = item.get("assetId")
-            # if not asset_id or not audio_url:
-            #     continue
-
-            # filename = f"{sanitize(scientific_name)}_ML_{asset_id}.wav"  # Changed to WAV
-            # metadata = {
-            #     "source": "Macaulay Library",
-            #     "id": str(asset_id),
-            #     "species": item.get("scientificName"),
-            #     "common_name": item.get("commonName"),
-            #     "location": item.get("location"),
-            #     "date": item.get("date"),
-            #     "recordist": item.get("recordist"),
-            #     "country": item.get("country"),
-            #     "license": item.get("license"),
-            #     "url": f"https://macaulaylibrary.org/asset/{asset_id}",
-            #     "filename": filename
-            # }
-            # download_audio(species_folder, filename, audio_url, metadata)
+                # asset_id = item.get("assetId")
+                # if not asset_id or not audio_url:
+                #     continue
+                # filename = f"{sanitize(scientific_name)}_ML_{asset_id}.wav"  # Changed to WAV
+                # metadata = {
+                #     "source": "Macaulay Library",
+                #     "id": str(asset_id),
+                #     "species": item.get("scientificName"),
+                #     "common_name": item.get("commonName"),
+                #     "location": item.get("location"),
+                #     "date": item.get("date"),
+                #     "recordist": item.get("recordist"),
+                #     "country": item.get("country"),
+                #     "license": item.get("license"),
+                #     "url": f"https://macaulaylibrary.org/asset/{asset_id}",
+                #     "filename": filename
+                # }
+                # download_audio(species_folder, filename, audio_url, metadata)
         return url_list
-
+        
     except Exception as e:
         print(f"❌ Macaulay error for {scientific_name}: {e}")
+    
 
 # ------------------------------------------------------------------------------
 # Xeno-Canto fetch
