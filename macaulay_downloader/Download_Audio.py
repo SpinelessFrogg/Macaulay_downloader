@@ -196,6 +196,8 @@ def fetch_macaulay(code, scientific_name='', species_folder=''):
                 # }
                 # download_audio(species_folder, filename, audio_url, metadata)
         print(f"Found {len(url_list)} total recordings on Macaulay")
+        if con:
+            con.close()
         return url_list
         
     except Exception as e:
