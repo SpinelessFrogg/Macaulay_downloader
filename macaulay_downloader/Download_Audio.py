@@ -153,7 +153,7 @@ def fetch_macaulay(code, scientific_name='', species_folder=''):
 
     url = MACAULAY_URL
     page = 1
-    
+    url_list = []
     try:
         while page < 34:
             params = {
@@ -171,7 +171,7 @@ def fetch_macaulay(code, scientific_name='', species_folder=''):
                 break
             
             
-            url_list = []
+            
             for item in results:
                 audio_url = item.get("audioUrl") or item.get("mediaUrl")
                 url_list.append(audio_url)
