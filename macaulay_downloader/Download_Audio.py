@@ -255,7 +255,7 @@ def main():
         os.makedirs(species_folder, exist_ok=True)
 
         # Download from Macaulay
-        fetch_macaulay(scientific_name, code, species_folder)
+        fetch_macaulay(code, scientific_name, species_folder)
 
         # Download from Xeno-Canto
         fetch_xeno_canto(common_name, scientific_name, species_folder)
