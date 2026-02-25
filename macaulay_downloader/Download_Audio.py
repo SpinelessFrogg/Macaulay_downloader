@@ -150,18 +150,19 @@ def download_audio(species_folder, filename, url, metadata):
 # Macaulay fetch
 def fetch_macaulay(code, scientific_name='', species_folder=''):
     print(f"🔎 Searching Macaulay: {scientific_name}")
-    params = {
-        "taxonCode": code,
-        "mediaType": "audio",
-        "sort": "rating_rank_desc",
-        "pageSize": 1000,
-        "page": page
-    }
+
     url = MACAULAY_URL
     page = 1
     
     try:
         while True:
+            params = {
+                        "taxonCode": code,
+                        "mediaType": "audio",
+                        "sort": "rating_rank_desc",
+                        "pageSize": 1000,
+                        "page": page
+            }
             response = requests.get(url, params=params, timeout=15)
             response.raise_for_status()
             json_data = response.json()
