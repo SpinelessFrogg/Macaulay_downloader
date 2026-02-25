@@ -155,7 +155,7 @@ def fetch_macaulay(code, scientific_name='', species_folder=''):
     page = 1
     
     try:
-        while True:
+        while page < 34:
             params = {
                         "taxonCode": code,
                         "mediaType": "audio",
@@ -169,7 +169,7 @@ def fetch_macaulay(code, scientific_name='', species_folder=''):
             results = json_data.get('results', {}).get('content', [])
             if not results:
                 break
-            print(f"  → Found {len(results)} recordings on Macaulay")
+            
             
             url_list = []
             for item in results:
@@ -195,6 +195,7 @@ def fetch_macaulay(code, scientific_name='', species_folder=''):
                 #     "filename": filename
                 # }
                 # download_audio(species_folder, filename, audio_url, metadata)
+        print(f"Found {len(url_list)} total recordings on Macaulay")
         return url_list
         
     except Exception as e:
