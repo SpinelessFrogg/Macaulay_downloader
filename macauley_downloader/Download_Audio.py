@@ -148,7 +148,7 @@ def download_audio(species_folder, filename, url, metadata):
 
 # ------------------------------------------------------------------------------
 # Macaulay fetch
-def fetch_macaulay(scientific_name, code, species_folder):
+def fetch_macaulay(scientific_name='', code, species_folder=''):
     print(f"🔎 Searching Macaulay: {scientific_name}")
     params = {
         "taxonCode": code,
